@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="Style.css">
 
     <!-- CDN START -->
     <!-- Bootstrap css START from: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
@@ -15,17 +16,22 @@
 </head>
 <body>
     <div class="containter">
-        <div id="pictureSpace">
-            <img rotate="180" id="image" src="pictures/frontWithSL.png" alt="Responsive image" class="img-fluid btn" >
+
+        <div class="generic align-items-center text-center d-flex">
+
+         <img id="flipImage" src="pictures/frontWithSL2.png" class="rounded img-fluid btn">
+                
         </div>
+    
         <div id="bottomBar">
                 
         </div>
+
     </div>
 
     <script>
         let isFront = true;
-        let image = document.getElementById("image");
+        let image = document.getElementById("flipImage");
 
         image.addEventListener("click", changeImage);
         function changeImage(){
@@ -33,7 +39,7 @@
                 image.src="pictures/back.png";
                 isFront=false; 
             }else{
-                image.src="pictures/frontWithSL.png";
+                image.src="pictures/frontWithSL2.png";
                 isFront=true;
             } 
         }
